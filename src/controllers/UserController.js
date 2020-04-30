@@ -31,7 +31,7 @@ module.exports = {
         .update({username})
         .where({id})
 
-      return res.status(201).send  
+      return res.send()
     } catch (error){
       next(error)
     }
