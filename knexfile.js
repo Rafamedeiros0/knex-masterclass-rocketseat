@@ -8,6 +8,10 @@ module.exports = {
       database: "knex_text",
       user: "postgres",
       password: "12345"
+    },
+    migrations: {
+      tableName:'knex_migrations',
+      directory: `${__dirname}/src/database/migrations`
     }
   }
 };
