@@ -7,4 +7,4 @@ exports.up = knex =>  knex.schema.createTable('users', table => {
     table.timestamp('update_at').defaultTo(knex.fn.now())
 })
 
-exports.down = knex => knex.schema.dropTable('usrs')
+exports.down = knex => knex.schema.dropTable('users')
