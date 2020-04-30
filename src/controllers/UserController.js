@@ -30,9 +30,23 @@ module.exports = {
         .update({username})
         .where({id})
 
-      return res.send  
+      return res.status(201).send  
     } catch (error){
       next(error)
     }
   },
+  async delete(req, res, next) {
+    try {
+      const { id } = req.params
+
+      await knex('users')
+        .where({ id })
+        .del()
+
+      return res.send()
+
+    } catch (error){
+      next(error)
+    }
+  }
 }
